@@ -1,0 +1,53 @@
+<app-spinner *ngIf="loading$ | async"></app-spinner>
+
+<section fxLayoutAlign="center">
+  <mat-card>
+    <form fxLayout="column" fxLayoutAlign="center center" fxLayoutGap="10px" #f="ngForm"
+      (ngSubmit)="registrarUsuario(f)">
+
+      <mat-form-field>
+        <mat-label>Ingrese Nombre</mat-label>
+        <input type="text" matInput placeholder="Ingrese nombre" name="nombre" ngModel required />
+        <mat-error>Debe ingresar un nombre</mat-error>
+      </mat-form-field>
+
+      <mat-form-field>
+        <mat-label>Ingrese Apellidos</mat-label>
+        <input type="text" matInput placeholder="Ingrese apellidos" name="apellido" ngModel required />
+        <mat-error>Debe ingresar un apellido</mat-error>
+      </mat-form-field>
+
+      <mat-form-field>
+        <mat-label>Ingrese User Name</mat-label>
+        <input type="text" matInput placeholder="Ingrese user name" name="username" ngModel required />
+        <mat-error>Debe ingresar un username</mat-error>
+      </mat-form-field>
+
+      <mat-form-field>
+        <mat-label>Ingrese teléfono</mat-label>
+        <input type="text" matInput placeholder="Ingrese telefono" name="telefono" ngModel required />
+        <mat-error>Debe ingresar un teléfono</mat-error>
+      </mat-form-field>
+
+      <mat-form-field>
+        <mat-label>Ingrese Email</mat-label>
+        <input type="email" matInput placeholder="Email" name="email" ngModel required />
+        <mat-error>Debe ingresar un Email</mat-error>
+      </mat-form-field>
+
+      <mat-form-field>
+        <mat-label>Ingrese Password</mat-label>
+        <input type="password" matInput placeholder="Password" name="password" ngModel required minlength="7" />
+        <mat-error>El password debe tener más de 7 caracteres</mat-error>
+      </mat-form-field>
+
+      <mat-form-field>
+        <mat-label>Confirme Password</mat-label>
+        <input type="password" matInput placeholder="Confirme Password" name="passwordConfirm" ngModel required minlength="7" />
+        <mat-error>El password debe tener más de 7 caracteres</mat-error>
+      </mat-form-field>
+
+      <button mat-raised-button color="primary" type="submit">Enviar</button>
+    </form>
+  </mat-card>
+</section>
