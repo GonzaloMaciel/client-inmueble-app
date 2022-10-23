@@ -11,5 +11,5 @@ export const environment = {
       appId: "1:848406831072:web:89396ad3b08797855a1585"
     }
   },
-  url: 'http://localhost:5000/'
+  url: 'https://gonzanetapp.herokuapp.com/'
 };

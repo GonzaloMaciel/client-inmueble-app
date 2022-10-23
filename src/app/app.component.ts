@@ -28,8 +28,11 @@ export class AppComponent implements OnInit {
     ) {}
 
   ngOnInit() {
+    console.log("from user guana 2:" + fromUser.getUser);
     this.user$ = this.store.pipe(select(fromUser.getUser)) as Observable<fromUser.UserResponse>;
     this.isAuthorized$ = this.store.pipe(select(fromUser.getIsAuthorized)) as Observable<boolean>;
+
+    this.store.dispatch(new fromUser.Init());
   }
 
   onToggleSpinner(): void {

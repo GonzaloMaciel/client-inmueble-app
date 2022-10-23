@@ -26,42 +26,42 @@ export function reducer(state = initialState, action: fromActions.All | any): Us
     }
 
     case fromActions.Types.INIT_AUTHORIZED:{
-      return {...state, loading: false, entity: action.user, id: action.id, error:null};
+      return {...state, loading: false, entity: action.user, email: action.email, error:null};
     }
 
     case fromActions.Types.INIT_ERROR:{
-      return {...state, loading: false, entity: null, id: null, error:action.error};
+      return {...state, loading: false, entity: null, email: null, error:action.error};
     }
 
     case fromActions.Types.INIT_UNAUTHORIZED:{
-      return {...state, loading: false, entity: null, id: null, error:null};
+      return {...state, loading: false, entity: null, email: null, error:null};
     }
 
     //Login
     case fromActions.Types.SIGING_IN_EMAIL:{
-      return {...state, loading: true, entity: null, id: null, error:null};
+      return {...state, loading: true, entity: null, email: null, error:null};
     }
 
     case fromActions.Types.SIGING_IN_EMAIL_SUCCESS:{
-      return {...state, loading: false, entity: action.user, id: action.id, error:null};
+      return {...state, loading: false, entity: action.user, email: action.email, error:null};
     }
 
     case fromActions.Types.SIGING_IN_EMAIL_ERROR:{
-      return {...state, loading: false, entity: null, id: null, error:action.error};
+      return {...state, loading: false, entity: null, email: null, error:action.error};
     }
 
 
     //Registro de usuario
     case fromActions.Types.SIGING_UP_EMAIL:{
-      return {...state, loading: true, entity: null, id: null, error:null};
+      return {...state, loading: true, entity: null, email: null, error:null};
     }
 
     case fromActions.Types.SIGING_UP_EMAIL_SUCCESS:{
-      return {...state, loading: false, entity: action.user, id: action.id, error:null};
+      return {...state, loading: false, entity: action.user, email: action.email, error:null};
     }
 
     case fromActions.Types.SIGING_UP_EMAIL_ERROR:{
-      return {...state, loading: false, entity: null, id: null, error: action.error};
+      return {...state, loading: false, entity: null, email: null, error: action.error};
     }
 
     //Logout o salir de sesion
@@ -74,7 +74,7 @@ export function reducer(state = initialState, action: fromActions.All | any): Us
     }
 
     case fromActions.Types.SIGING_OUT_EMAIL_ERROR:{
-      return {...state, loading: false, entity: null, id: null, error: action.error};
+      return {...state, loading: false, entity: null, email: null, error: action.error};
     }
 
     default:{
